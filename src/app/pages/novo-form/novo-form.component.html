@@ -1,0 +1,72 @@
+<form (ngSubmit)="submit()" [formGroup]="carroForm" #formDir="ngForm">
+  <div class="form-group container">
+    <label for="exampleFormControlSelect1" class="mt-4">Marca do Carro</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+    </select>
+
+    <div class="form-group mt-3">
+      <label for="formGroupExampleInput">Modelo do Carro</label>
+      <input
+        type="text"
+        class="form-control"
+        id="formGroupExampleInput"
+        placeholder="Coloque o modelo do Carro"
+        name="dc_modelo"
+        formControlName="dc_modelo"
+      />
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="formGroupExampleInput">Ano de Fabricação</label>
+      <input
+        type="number"
+        class="form-control"
+        id="formGroupExampleInput"
+        placeholder="Coloque o ano de Fabricação"
+        name="dc_ano_fabricacao"
+        formControlName="dc_ano_fabricacao "
+      />
+    </div>
+
+
+    <!-- Fazer Validação /  colocar limite de caractéres de até 4 dígitos-->
+
+    <div class="form-group mt-3">
+      <label for="formGroupExampleInput">Data de Compra</label>
+      <input
+        type="number"
+        class="form-control"
+        id="formGroupExampleInput"
+        placeholder="Coloque a data de compra"
+        name="dt_compra"
+        formControlName="dt_compra"
+
+        />
+    </div>
+    <!--   Mascara de data -->
+
+    <div class="form-group mt-3">
+      <label for="formGroupExampleInput">Valor do Carro <span class="text-danger">*</span></label>
+      <input
+        type="number"
+        class="form-control"
+        id="formGroupExampleInput"
+        name="nm_valor"
+        placeholder="Coloque o Valor do Carro"
+        formControlName="nm_valor "
+      />
+    </div>
+    <!-- Mascara monetaria-->
+    <div>
+      <p class="alert alert-danger" role="alert" *ngIf="nm_valor.invalid && formDir.submitted" > O valor do Carro é Obrigatório
+      </p>
+    </div>
+
+
+    <div class="form-group mt-3">
+      <input class="btn btn-primary" type="submit" value="Cadastrar" />
+    </div>
+  </div>
+</form>
