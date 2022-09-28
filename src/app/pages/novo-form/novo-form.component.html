@@ -21,23 +21,28 @@
     <div class="form-group mt-3">
       <label for="formGroupExampleInput">Ano de Fabricação</label>
       <input
-        type="number"
+        type="text"
         class="form-control"
         id="formGroupExampleInput"
         placeholder="Coloque o ano de Fabricação"
         name="dc_ano_fabricacao"
-        formControlName="dc_ano_fabricacao "
+        formControlName="dc_ano_fabricacao"
+
       />
     </div>
 
+    <div *ngIf=" formDir.submitted && dc_ano_fabricacao.errors?.['maxlength'] || dc_ano_fabricacao.errors?.['minlength'] ">
+      <p class="alert alert-danger">O ano de Fabricação deve conter 4 caracteres</p>
+    </div>
 
     <!-- Fazer Validação /  colocar limite de caractéres de até 4 dígitos-->
 
     <div class="form-group mt-3">
       <label for="formGroupExampleInput">Data de Compra</label>
       <input
-        type="number"
+        type="text"
         class="form-control"
+        mask="d0/M0/0000"
         id="formGroupExampleInput"
         placeholder="Coloque a data de compra"
         name="dt_compra"
@@ -50,15 +55,16 @@
     <div class="form-group mt-3">
       <label for="formGroupExampleInput">Valor do Carro <span class="text-danger">*</span></label>
       <input
-        type="number"
+        type="text"
+        prefix="R$" mask="separator.2" thousandSeparator=","
         class="form-control"
         id="formGroupExampleInput"
         name="nm_valor"
         placeholder="Coloque o Valor do Carro"
-        formControlName="nm_valor "
+        formControlName="nm_valor"
       />
     </div>
-    <!-- Mascara monetaria-->
+
     <div>
       <p class="alert alert-danger" role="alert" *ngIf="nm_valor.invalid && formDir.submitted" > O valor do Carro é Obrigatório
       </p>

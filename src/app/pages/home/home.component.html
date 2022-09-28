@@ -1,21 +1,24 @@
-<h2 class="mt-4">Aqui Estão os Carros Cadastrados</h2>
+<div class="container" >
+  <h2 class="mt-4">Aqui Estão os Carros Cadastrados</h2>
 
-<table class="table table-hover mt-4">
-  <thead>
-    <tr>
+  <table class="table table-hover mt-4">
+    <thead>
+      <tr>
 
-      <th scope="col">Marca</th>
-      <th scope="col">Ano de Fabricação</th>
-      <th scope="col">Data de Compra</th>
-      <th scope="col">Valor de Compra</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let carro of carros">
-      <td >{{carro.marca_carro}}</td>
-      <td >{{carro.dc_ano_fabricacao}}</td>
-      <td >{{carro.dt_compra }}</td>
-      <td >{{carro.nm_valor }}</td>
-    </tr>
-  </tbody>
-</table>
+        <th scope="col">Marca</th>
+        <th scope="col">Ano de Fabricação</th>
+        <th scope="col">Data de Compra</th>
+        <th scope="col">Valor de Compra</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let carro of carros">
+        <td >{{carro.dc_modelo}}</td>
+        <td >{{carro.dc_ano_fabricacao}}</td>
+        <td >{{carro.dt_compra }}</td>
+        <td >{{carro.nm_valor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

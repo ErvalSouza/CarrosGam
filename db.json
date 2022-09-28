@@ -2,19 +2,19 @@
   "carros": [
     {
       "id": 1,
-      "marca_carro": "VW",
+      "marca_carro": "",
       "dc_modelo": "Gol",
-      "dc_ano_fabricacao": 2005,
-      "dt_compra": 10102020,
-      "nm_valor": 1000
+      "dc_ano_fabricacao": "2010",
+      "dt_compra": "10/10/2021",
+      "nm_valor": "R$19,000"
     },
     {
       "id": 2,
       "marca_carro": "",
       "dc_modelo": "teste",
-      "dc_ano_fabricacao": 2010,
-      "dt_compra": 10102015,
-      "nm_valor": 10000
+      "dc_ano_fabricacao": "1111",
+      "dt_compra": "10/11/2021",
+      "nm_valor": "R$11,111"
     }
   ]
 }
